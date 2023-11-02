@@ -16,6 +16,26 @@ class Employee:
         """String method"""
         return f"{self.first_name:<10} {self.last_name:<20} {self.formatted_weekly_salary:>14}"
 
+    def __eq__(self, other):
+        """Equal method"""
+        return self.weekly_salary == other.weekly_salary
+
+    def __gt__(self, other):
+        """Greater than"""
+        return self.weekly_salary > other.weekly_salary
+
+    def __lt__(self, other):
+        """Less than"""
+        return self.weekly_salary < other.weekly_salary
+
+    def __ge__(self, other):
+        """Greater than or Equal to"""
+        return self.weekly_salary >= other.weekly_salary
+
+    def __le__(self, other):
+        """Less than or Equal to"""
+        return self.weekly_salary <= other.weekly_salary
+
     def first_and_last_name(self):
         """Return first and last name concatenated together"""
         return f"{self.first_name:<10} {self.last_name:<20}"
